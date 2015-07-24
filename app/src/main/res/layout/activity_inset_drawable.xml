@@ -13,17 +13,20 @@
 		android:id="@+id/textView"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:background="@drawable/selector_inset"
+		android:layout_margin="@dimen/inset_value"
+		android:background="@drawable/selector_non_inset"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:textColor="@android:color/white"
-		android:text="@string/hello_world"/>
+		android:text="Normal Selector"/>
 
 	<TextView
 		android:id="@+id/textView2"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/textView"
+		android:background="@drawable/selector_inset"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:text="@string/hello_world"/>
+		android:textColor="@android:color/white"
+		android:layout_below="@+id/textView"
+		android:text="InsetDrawable Selector"/>
 
 </RelativeLayout>
