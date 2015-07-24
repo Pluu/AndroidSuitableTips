@@ -1,0 +1,12 @@
+<resources>
+	<string name="app_name">SuitableTips</string>
+
+	<string name="hello_world">Hello world!</string>
+	<string name="action_settings">Settings</string>
+	<string name="title_activity_color_filter">1. ColorFilter</string>
+	<string name="title_activity_color_filter_items">2. ColorFilter Items</string>
+	<string name="title_activity_edit_text">3. EditText</string>
+	<string name="title_activity_selector">4. Selector</string>
+	<string name="title_activity_inset_drawable">5. InsetDrawable</string>
+	<string name="title_activity_sqlite">6. Sqlite</string>
+</resources>
