@@ -9,28 +9,32 @@ import android.widget.ImageView;
 import java.util.List;
 
 import com.pluu.suitabletips.R;
-import com.pluu.suitabletips.adapter.item.ColorItem;
+import com.pluu.suitabletips.adapter.item.LightingItem;
 
 /**
  * Created by nohhs on 2015-07-24.
  */
-public class TintAdapter extends RecyclerView.Adapter<TintAdapter.TintViewHolder> {
+public class LightingColorFilterAdapter extends RecyclerView.Adapter<LightingColorFilterAdapter.ViewHolder> {
 
-	private final List<ColorItem> list;
+	private final List<LightingItem> list;
 
-	public TintAdapter(List<ColorItem> list) {this.list = list;}
+	public LightingColorFilterAdapter(List<LightingItem> list) {this.list = list;}
 
 	@Override
-	public TintViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+	public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 		View itemView = LayoutInflater.from(parent.getContext())
 									  .inflate(R.layout.layout_list_tint_item, parent, false);
-		return new TintViewHolder(itemView);
+		return new ViewHolder(itemView);
 	}
 
 	@Override
-	public void onBindViewHolder(TintViewHolder holder, int position) {
-		ColorItem item = list.get(position);
+	public void onBindViewHolder(ViewHolder holder, int position) {
+		LightingItem item = list.get(position);
 		holder.img.setColorFilter(item.filter);
+
+		if (item.lightingFilter != null) {
+			holder.img.setColorFilter(item.lightingFilter);
+		}
 	}
 
 	@Override
@@ -38,10 +42,10 @@ public class TintAdapter extends RecyclerView.Adapter<TintAdapter.TintViewHolder
 		return list != null ? list.size() : 0;
 	}
 
-	public final static class TintViewHolder extends RecyclerView.ViewHolder {
+	public final static class ViewHolder extends RecyclerView.ViewHolder {
 		public final ImageView img;
 
-		public TintViewHolder(View itemView) {
+		public ViewHolder(View itemView) {
 			super(itemView);
 			img = (ImageView) itemView.findViewById(R.id.imageView);
 		}

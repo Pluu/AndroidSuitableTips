@@ -17,7 +17,7 @@ import java.util.Random;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.pluu.suitabletips.adapter.ColorItem;
+import com.pluu.suitabletips.adapter.item.ColorItem;
 import com.pluu.suitabletips.adapter.PorterDuffAdapter;
 import com.pluu.suitabletips.adapter.TintAdapter;
 

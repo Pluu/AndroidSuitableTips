@@ -35,6 +35,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".LightingColorFilterActivity"
+            android:label="@string/title_activity_lighting_color_filter" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.pluu.suitabletips.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".EditTextActivity"
             android:label="@string/title_activity_edit_text" >
             <intent-filter>
@@ -64,15 +72,6 @@
         <activity
             android:name=".SqliteActivity"
             android:label="@string/title_activity_sqlite" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="com.pluu.suitabletips.SAMPLE_CODE" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".CaptureActivity"
-            android:label="@string/title_activity_capture" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

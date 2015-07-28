@@ -1,4 +1,4 @@
-package com.pluu.suitabletips.adapter;
+package com.pluu.suitabletips.adapter.item;
 
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
