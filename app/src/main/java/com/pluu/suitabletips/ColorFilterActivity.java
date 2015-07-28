@@ -9,8 +9,6 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Random;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -24,7 +22,7 @@ public class ColorFilterActivity extends AppCompatActivity
 	@Bind(R.id.imageView)
 	ImageView imageView;
 
-	private final Random r = new Random(System.currentTimeMillis());
+	private int filterColor;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +30,15 @@ public class ColorFilterActivity extends AppCompatActivity
 		setContentView(R.layout.activity_color_filter);
 		ButterKnife.bind(this);
 
+		filterColor = Color.parseColor("#0D47A1");
 		switch1.setOnCheckedChangeListener(this);
 	}
 
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		if (isChecked) {
-			int color = Color.rgb(r.nextInt(255), r.nextInt(255), r.nextInt(255));
-			textView.setTextColor(color);
-			imageView.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+			textView.setTextColor(filterColor);
+			imageView.setColorFilter(filterColor, PorterDuff.Mode.MULTIPLY);
 		} else {
 			int defaultColor = getResources().getColor(R.color.secondary_text);
 			textView.setTextColor(defaultColor);
