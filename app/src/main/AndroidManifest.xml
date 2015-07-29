@@ -39,6 +39,7 @@
             android:label="@string/title_activity_lighting_color_filter" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="com.pluu.suitabletips.SAMPLE_CODE" />
             </intent-filter>
         </activity>
@@ -72,6 +73,15 @@
         <activity
             android:name=".SqliteActivity"
             android:label="@string/title_activity_sqlite" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.pluu.suitabletips.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LevelListDrawableActivity"
+            android:label="@string/title_activity_level_list_drawable" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

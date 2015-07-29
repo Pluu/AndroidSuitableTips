@@ -9,9 +9,33 @@
 	android:paddingTop="@dimen/activity_vertical_margin"
 	tools:context="com.pluu.suitabletips.SqliteActivity">
 
-	<TextView
-		android:layout_width="wrap_content"
+	<LinearLayout
+		android:id="@+id/layoutMenu"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/hello_world"/>
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/button"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Normal\nInsert"/>
+
+		<Button
+			android:id="@+id/button2"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Transaction\nInsert"/>
+	</LinearLayout>
+
+	<ListView
+		android:id="@android:id/list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/layoutMenu"
+		android:scrollbars="vertical"
+		android:fadeScrollbars="false"/>
 
 </RelativeLayout>

@@ -21,8 +21,6 @@ public class SelectorActivity extends AppCompatActivity {
 	@Bind(R.id.button2)
 	Button button;
 
-	private final int RADIUS = 15;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -51,7 +49,7 @@ public class SelectorActivity extends AppCompatActivity {
 	}
 
 	private Drawable createDrawable(int bgColor) {
-		int r = RADIUS;
+		final int r = 15;
 		float[] outerR = new float[]{r, r, r, r, r, r, r, r};
 		RoundRectShape rectShape = new RoundRectShape(outerR, null, null);
 
