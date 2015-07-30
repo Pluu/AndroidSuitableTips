@@ -12,7 +12,8 @@
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="New Text"
+		android:text="Focus 1"
+		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_alignBaseline="@+id/editText"
 		android:id="@+id/textView"/>
 
@@ -23,13 +24,13 @@
 		android:id="@+id/editText"
 		android:layout_toRightOf="@+id/textView"
 		android:nextFocusDown="@+id/editText3"
-		android:hint="HINT 1" />
+		android:hint="Next Focus 3" />
 
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:text="Large Text"
+		android:text="Focus 2"
+		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_below="@+id/editText"
 		android:layout_alignBaseline="@+id/editText2"
 		android:id="@+id/textView2"/>
@@ -44,13 +45,13 @@
 		android:layout_toRightOf="@+id/textView2"
 		android:imeOptions="actionSearch"
 		android:id="@+id/editText2"
-		android:hint="HINT 2"/>
+		android:hint="Action Search"/>
 
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:text="Focus 3"
 		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:text="Medium Text"
 		android:layout_below="@+id/editText2"
 		android:layout_alignBaseline="@+id/editText3"
 		android:id="@+id/textView3"/>
@@ -64,7 +65,7 @@
 		android:id="@+id/editText3"
 		android:layout_below="@+id/editText2"
 		android:layout_toRightOf="@+id/textView3"
-		android:hint="HINT 3"/>
+		android:hint="None"/>
 
 	<EditText
 		style="@style/DefaultEditText"
@@ -75,7 +76,7 @@
 		android:id="@+id/editText4"
 		android:layout_below="@+id/editText3"
 		android:imeOptions="actionDone"
-		android:hint="HINT 4"/>
+		android:hint="Action Done"/>
 
 	<EditText
 		style="@style/DefaultEditText"
@@ -85,6 +86,6 @@
 		android:ems="10"
 		android:id="@+id/editText5"
 		android:layout_below="@+id/editText4"
-		android:hint="HINT 5"/>
+		android:hint="None"/>
 
 </RelativeLayout>
