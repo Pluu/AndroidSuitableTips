@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -19,6 +18,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.pluu.suitabletips.db.TestDatabase;
+import com.pluu.suitabletips.dialog.TimerDialog;
 
 public class SqliteActivity extends AppCompatActivity {
 
@@ -31,9 +31,9 @@ public class SqliteActivity extends AppCompatActivity {
 
 	private List<String> list;
 
-	private final SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss SSS");
+	private final SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss:SSS");
 	private ArrayAdapter<String> adapter;
-	private AlertDialog dlg;
+	private TimerDialog dlg;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +48,8 @@ public class SqliteActivity extends AppCompatActivity {
 									 android.R.layout.simple_list_item_1,
 									 list);
 		listView.setAdapter(adapter);
-		dlg = new AlertDialog.Builder(this)
-			.setCancelable(false)
-			.setMessage("Processing...").create();
+		dlg = new TimerDialog(this);
+		dlg.setCancelable(false);
 	}
 
 	@OnClick({R.id.button, R.id.button2})
