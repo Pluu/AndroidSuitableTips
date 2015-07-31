@@ -9,8 +9,6 @@ import butterknife.ButterKnife;
 
 public class LevelListDrawableActivity extends AppCompatActivity {
 
-	@Bind(R.id.imageView)
-	ImageView imageView;
 	@Bind(R.id.imageView2)
 	ImageView imageView2;
 	@Bind(R.id.imageView3)

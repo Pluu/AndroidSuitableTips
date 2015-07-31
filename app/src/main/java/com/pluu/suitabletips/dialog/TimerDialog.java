@@ -22,7 +22,7 @@ public class TimerDialog extends AlertDialog {
 	@Bind(R.id.textView)
 	TextView timeText;
 
-	private Handler handler = new Handler();
+	private final Handler handler = new Handler();
 	private long startTime, diffTime;
 	private long minute, sec;
 	private final String format = "%02d:%02d:%03d";
@@ -61,7 +61,7 @@ public class TimerDialog extends AlertDialog {
 		return String.format(format, minute, sec, diffTime);
 	}
 
-	private Runnable updateTimer = new Runnable() {
+	private final Runnable updateTimer = new Runnable() {
 		@Override
 		public void run() {
 			timeText.setText(getDiffTime());

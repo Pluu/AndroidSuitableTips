@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -31,7 +32,7 @@ public class SqliteActivity extends AppCompatActivity {
 
 	private List<String> list;
 
-	private final SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss:SSS");
+	private final SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss:SSS", Locale.getDefault());
 	private ArrayAdapter<String> adapter;
 	private TimerDialog dlg;
 
