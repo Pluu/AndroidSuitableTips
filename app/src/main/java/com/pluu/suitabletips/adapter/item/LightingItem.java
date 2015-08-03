@@ -7,14 +7,11 @@ import android.graphics.PorterDuff;
  * Created by PLUUSYSTEM-NEW on 2015-07-29.
  */
 public class LightingItem extends ColorItem {
-	public LightingColorFilter lightingFilter;
+	public final LightingColorFilter lightingFilter;
 
-	public LightingItem(int color, PorterDuff.Mode mode) {
+	public LightingItem(int color, PorterDuff.Mode mode, LightingColorFilter filter) {
 		super(color, mode);
-	}
-
-	public void setLightingFilter(LightingColorFilter lightingFilter) {
-		this.lightingFilter = lightingFilter;
+		this.lightingFilter = filter;
 	}
 
 }

@@ -18,7 +18,12 @@ public class LightingColorFilterAdapter extends RecyclerView.Adapter<LightingCol
 
 	private final List<LightingItem> list;
 
-	public LightingColorFilterAdapter(List<LightingItem> list) {this.list = list;}
+	private boolean isLightingFilter;
+
+	public LightingColorFilterAdapter(List<LightingItem> list) {
+		this.list = list;
+		this.isLightingFilter = false;
+	}
 
 	@Override
 	public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -32,7 +37,7 @@ public class LightingColorFilterAdapter extends RecyclerView.Adapter<LightingCol
 		LightingItem item = list.get(position);
 		holder.img.setColorFilter(item.filter);
 
-		if (item.lightingFilter != null) {
+		if (isLightingFilter) {
 			holder.img.setColorFilter(item.lightingFilter);
 		}
 	}
@@ -40,6 +45,10 @@ public class LightingColorFilterAdapter extends RecyclerView.Adapter<LightingCol
 	@Override
 	public int getItemCount() {
 		return list != null ? list.size() : 0;
+	}
+
+	public void setLightingFilter(boolean isAlive) {
+		this.isLightingFilter = isAlive;
 	}
 
 	public final static class ViewHolder extends RecyclerView.ViewHolder {

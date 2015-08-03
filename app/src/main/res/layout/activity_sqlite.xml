@@ -13,7 +13,7 @@
 		android:layout_margin="10dp"
 		android:text="10,000 Count Test"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:textColor="@color/colorButtonNormal"
+		android:textColor="@android:color/black"
 		android:textStyle="bold"/>
 
 	<LinearLayout

@@ -9,23 +9,18 @@
 	android:paddingTop="@dimen/activity_vertical_margin"
 	tools:context="com.pluu.suitabletips.LightingColorFilterActivity">
 
-	<Button
-		android:id="@+id/filter"
+	<android.support.v7.widget.SwitchCompat
+		android:id="@+id/switch1"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="Refresh Lighting Filter"/>
-
-	<Button
-		android:id="@+id/clear"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/filter"
-		android:text="Remove Lighting Filter"/>
+		android:text="Lighting Filter"
+		android:textAppearance="@android:style/TextAppearance.Large"/>
 
 	<android.support.v7.widget.RecyclerView
 		android:id="@+id/tintRecyclerView"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:layout_below="@+id/clear"
-		android:scrollbars="vertical" />
+		android:layout_below="@+id/switch1"
+		android:layout_marginTop="10dp"
+		android:scrollbars="vertical"/>
 </RelativeLayout>
