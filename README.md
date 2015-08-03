@@ -1,0 +1,1 @@
+Android Suitable Tips Sample
