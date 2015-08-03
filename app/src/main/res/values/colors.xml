@@ -9,4 +9,6 @@
 	<color name="icons">#FFFFFF</color>
 	<color name="divider">#B6B6B6</color>
 	<color name="color_hint">#0091ea</color>
+	<color name="colorButtonNormal">#607d8b</color>
+	<color name="colorControlHighlight">#263238</color>
 </resources>
