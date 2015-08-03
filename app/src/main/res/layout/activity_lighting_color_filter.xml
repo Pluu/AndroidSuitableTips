@@ -14,7 +14,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="Lighting Filter"
-		android:textAppearance="@android:style/TextAppearance.Large"/>
+		android:textAppearance="?android:textAppearanceLarge"
+		android:textStyle="bold"/>
 
 	<android.support.v7.widget.RecyclerView
 		android:id="@+id/tintRecyclerView"
