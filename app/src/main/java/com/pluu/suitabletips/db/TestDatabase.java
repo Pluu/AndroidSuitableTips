@@ -42,6 +42,9 @@ public class TestDatabase extends SQLiteOpenHelper {
 
 	public void remove() {
 		SQLiteDatabase db = getWritableDatabase();
+		db.beginTransaction();
 		db.delete(Tables.SESSION, null, null);
+		db.setTransactionSuccessful();
+		db.endTransaction();
 	}
 }
